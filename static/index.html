@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <link rel="author" href="https://like413.github.io/">
+  <title>Y-BotFrame: An Extensible Embodied Agent Framework for Quadruped Robot Assistants</title>
+  <meta name="description" content="Y-BotFrame: An Extensible Embodied Agent Framework for Quadruped Robot Assistants">
+  <meta name="keywords" content="Y-BotFrame; Embodied Agent; Quadruped Robot; Large Language Models; Multimodal Interaction; Autonomous Navigation; Quadruped Robot Assistants; Xidian University">
+
+  <meta property="og:title" content="Y-BotFrame: An Extensible Embodied Agent Framework for Quadruped Robot Assistants" />
+  <meta property="og:description" content="An extensible embodied platform that turns a quadruped robot into an intelligent ground assistant through multimodal perception, LLM-based task planning, and executable robot modules." />
+  <meta property="og:url" content="https://guyious.github.io/Y-BotFrame.github.io/" />
+  <meta property="og:image" content="static/DemoImages/ybfgo.png" />
+  <meta property="og:image:width" content="1500" />
+  <meta property="og:image:height" content="630" />
+
+  <meta name="twitter:title" content="Y-BotFrame: An Extensible Embodied Agent Framework for Quadruped Robot Assistants">
+  <meta name="twitter:description" content="An extensible embodied platform for instruction-driven quadruped robot assistants.">
+  <meta name="twitter:image" content="static/DemoImages/ybfgo.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="icon" type="image/x-icon" href="static/images/logo.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="static/images/logo.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="static/images/logo.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="static/images/logo.png">
+  <link rel="manifest" href="/site.webmanifest">
+
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="static/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+  <script defer src="static/js/fontawesome.all.min.js"></script>
+  <script src="static/js/bulma-carousel.min.js"></script>
+  <script src="static/js/bulma-slider.min.js"></script>
+  <script src="static/js/index.js"></script>
+  <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+  <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+          tex2jax: {
+              inlineMath: [['$','$'], ['\\(','\\)']],
+              processEscapes: true
+          }
+        });
+  </script>
+</head>
+
+<body>
+
+  <nav class="navbar" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+      <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    </div>
+    <div class="navbar-menu">
+      <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
+        <a class="navbar-item" href="https://like413.github.io/">
+          <span class="icon"><i class="fas fa-home"></i></span>
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-1 publication-title">Y-BotFrame: An Extensible Embodied Agent Framework for Quadruped Robot Assistants</h1>
+            <div class="is-size-5 publication-authors">
+              <span class="author-block">Luyao Zhang<sup>1</sup>,&nbsp;</span>
+              <span class="author-block"><a href="https://like413.github.io/" target="_blank">Ke Li</a><sup>1</sup>,&nbsp;</span>
+              <span class="author-block">Yuan Ding<sup>1</sup>,&nbsp;</span>
+              <span class="author-block">Xulong Zhao<sup>1</sup>,&nbsp;</span>
+              <span class="author-block">Guo Yu<sup>1</sup>,&nbsp;</span>
+              <span class="author-block">Chengwei Yan<sup>1</sup>,&nbsp;</span>
+              <span class="author-block">Fuyu Dong<sup>1</sup>,&nbsp;</span>
+              <span class="author-block">Jiawei Hu<sup>1</sup>,&nbsp;</span>
+              <span class="author-block"><a href="https://wangdi-xidian.github.io/" target="_blank">Di Wang</a><sup>1 <object id="object" data="static/images/envelope.svg" width="16" height="16" type="image/svg+xml"></object></sup>,&nbsp;</span>
+              <span class="author-block">Nan Luo<sup>1</sup>,&nbsp;</span>
+              <span class="author-block">Gang Liu<sup>1</sup>,&nbsp;</span>
+              <span class="author-block"><a href="https://web.xidian.edu.cn/wangquan/index.html" target="_blank">Quan Wang</a><sup>1</sup></span>
+            </div>
+
+            <div class="is-size-5 publication-authors">
+              <span class="author-block">1. Xidian University, Xi'an, China</span>
+            </div>
+            <div class="is-size-5 publication-authors">
+              <span class="author-block"><object id="object" data="static/images/envelope.svg" width="20" height="20" type="image/svg+xml" style="position:relative;top:3px;"></object> Corresponding Author</span>
+            </div>
+
+            <div class="column has-text-centered">
+              <div class="publication-links">
+                <span class="link-block">
+                  <a href="" target="_blank" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon"><i class="fas fa-file-pdf"></i></span>
+                    <span>Paper</span>
+                  </a>
+                </span>
+                <span class="link-block">
+                  <a href="" target="_blank" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon"><i class="fab fa-github"></i></span>
+                    <span>Code</span>
+                  </a>
+                </span>
+                <span class="link-block">
+                  <a href="" target="_blank" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon"><i class="fas fa-video"></i></span>
+                    <span>Supplementary Video</span>
+                  </a>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="hero is-small">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+
+      <iframe width="100%" height="400"
+      src="https://www.youtube.com/embed/wN-_zaoRPC8"
+      frameborder="0" allowfullscreen>
+      </iframe>
+
+    </div>
+  </div>
+</section>
+
+  <section class="hero teaser">
+    <div class="container is-max-desktop">
+      <div class="hero-body" id="Figure1">
+        <center><img src="static/images/ybf_overview.png" border="0" width="100%"></center>
+        <div align="center">
+          <p style="text-align:justify; text-justify:inter-ideograph;width:100%">Figure 1. Overview of Y-BotFrame. The proposed system integrates multimodal human--robot interaction, an LLM-based task planner, executable tool modules, and robot-side execution feedback to support instruction-driven embodied tasks on a quadruped robot.</p>
+        </div><br>
+      </div>
+    </div>
+  </section>
+
+  <section class="section hero is-light">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Abstract</h2>
+          <div class="content has-text-justified">
+            <p style="text-align:justify; text-justify:inter-ideograph;">
+              Quadruped robots are capable of traversing a wide range of complex terrains with high flexibility. As highly mobile ground-based intelligent platforms, they can be equipped with modules for navigation control, environmental perception, and intelligent interaction, thereby serving as real-world mobile deployment platforms for various algorithms. In this paper, we introduce <b>Y-BotFrame</b>, an extensible embodied platform that turns a robot into an intelligent ground assistant. Y-BotFrame integrates multimodal perception capabilities, including speech, vision, and LiDAR, and employs a large language model as the cognitive core for environmental understanding, contextual reasoning, and task planning. The system maps user natural-language instructions into executable embodied task units that can be carried out by the robot. Y-BotFrame supports natural interaction through voice commands and visual feedback, removing the need for a remote controller and enabling efficient human-robot collaboration. With a highly extensible framework, Y-BotFrame supports plug-and-play integration of new functional modules as well as modular upgrades and iterative development, offering a reference implementation for the real-world deployment of general-purpose, instruction-driven embodied agents.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="Introduction">
+    <div class="container is-max-desktop content">
+      <h2 class="title">Introduction</h2>
+      <p>
+        Quadruped robots provide strong mobility, flexibility, and traversability in unstructured environments such as stairs, gravel paths, and grasslands, making them promising platforms for deploying general-purpose embodied agents. However, many existing quadruped robot systems focus on path planning, locomotion control, or task-specific policy learning, which limits multitask execution, extensibility, and stable deployment in open environments.
+      </p>
+      <p>
+        Y-BotFrame addresses these challenges by combining quadruped mobility, visual perception, and large-language-model-based semantic understanding and task planning. The framework encapsulates navigation, environmental perception, and embodied question answering into executable modules with clearly defined interfaces, while an LLM-based agent generates structured task plans from user instructions, interaction history, and environmental priors.
+      </p>
+    </div>
+  </section>
+
+
+  <footer class="footer">
+    <div class="container">
+      <div class="columns is-centered">
+        <div class="column is-8">
+          <div class="content">
+            <p>
+              <center><font size=2>© Y-BotFrame Authors | Last updated: 6/10/2026</font></center>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
