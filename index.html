@@ -126,10 +126,22 @@
     </div>
   </section>
 
+  <section class="hero is-small">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+
+      <video controls autoplay muted loop playsinline style="width:100%; border-radius:10px;">
+        <source src="static/videos/YBF.mp4" type="video/mp4">
+      </video>
+
+    </div>
+  </div>
+</section>
+
   <section class="hero teaser">
     <div class="container is-max-desktop">
       <div class="hero-body" id="Figure1">
-        <center><img src="static/DemoImages/ybfgo.png" border="0" width="100%"></center>
+        <center><img src="static/images/ybf_overview.png" border="0" width="100%"></center>
         <div align="center">
           <p style="text-align:justify; text-justify:inter-ideograph;width:100%">Figure 1. Overview of Y-BotFrame. The proposed system integrates multimodal human--robot interaction, an LLM-based task planner, executable tool modules, and robot-side execution feedback to support instruction-driven embodied tasks on a quadruped robot.</p>
         </div><br>
@@ -164,70 +176,6 @@
     </div>
   </section>
 
-  <!-- <section class="section hero is-light" id="Framework">
-    <div class="container is-max-desktop content">
-      <h2 class="title">System Framework</h2>
-      <p>
-        The Y-BotFrame task planner maps natural-language user instructions to executable module interfaces. It maintains structured descriptions of callable modules, including their functions, input parameters, applicable conditions, and execution constraints. During execution, modules report task progress, exceptions, and final results, supporting monitoring and replanning.
-      </p>
-    </div>
-  </section> -->
-
-  <!-- <section class="section" id="ToolFactory">
-    <div class="container is-max-desktop content">
-      <h2 class="title">Tool Factory</h2>
-      <p><b>Speech interaction.</b> The speech module enables natural communication through ASR and TTS, with an LLM for dialogue understanding and response generation. It can further incorporate a knowledge base, voiceprint recognition, and dialogue memory for domain-specific and long-term interaction.</p>
-      <p><b>Autonomous navigation.</b> The navigation module provides localization, path planning, and safe motion for the quadruped robot. It fuses LiDAR, GNSS, and IMU measurements, builds a local obstacle-aware grid map from LiDAR point clouds, and generates feasible paths using the A$^\ast$ algorithm.</p>
-      <p><b>Embodied question answering.</b> After reaching a target location, the robot performs a rotational scan, captures multi-view RGB observations, and uses Qwen3-VL-Flash to generate scene descriptions. These descriptions are fused with the user question and viewing angles through an LLM to produce the final answer.</p>
-    </div>
-  </section> -->
-
-  <!-- <section class="section hero is-light" id="Workflow">
-    <div class="container is-max-desktop content">
-      <h2 class="title">System Workflow and Infrastructure</h2>
-      <p>
-        The system supports voice-based human-robot interaction. When a request is received, the task planner retrieves callable functions according to the available module interfaces and generates the corresponding invocation instructions. If no suitable execution module is matched, the system treats the request as open-ended dialogue and returns a natural-language response through speech synthesis.
-      </p>
-      <p>
-        The task planner and functional modules communicate through synchronous invocation and asynchronous feedback over the same local area network. Modules can be deployed on the robot side or on a remote server depending on computational load and real-time requirements, reducing robot-side computation while improving extensibility, deployment flexibility, and operational efficiency.
-      </p>
-    </div>
-  </section> -->
-
-  <!-- <section class="section" id="Downloads">
-    <div class="container is-max-desktop content">
-      <h2 class="title">Downloads</h2>
-      <center>
-        <ul>
-          <li class="grid">
-            <div class="griditem">
-              <a href="" target="_blank" class="imageLink"><img src="static/DemoImages/paper.png"></a><br>
-              <a href="" target="_blank" class="imageLink">Paper</a>
-            </div>
-          </li>
-          <li class="mygrid">
-            <div class="mygriditem">
-              <a href="" target="_blank" class="imageLink"><img src="static/DemoImages/dataset.png"></a><br>
-              <a href="" target="_blank">Code / Project</a>
-            </div>
-          </li>
-        </ul><br><br>
-      </center>
-    </div>
-  </section> -->
-
-  <!-- <section class="section" id="BibTeX">
-    <div class="container is-max-desktop content">
-      <h2 class="title">BibTeX</h2>
-      Please consider citing Y-BotFrame if it helps your research.
-      <pre><code>@inproceedings{zhang2026ybotframe,
-  title={Y-BotFrame: An Extensible Embodied Agent Framework for Quadruped Robot Assistants},
-  author={Zhang, Luyao and Li, Ke and Ding, Yuan and Zhao, Xulong and Yu, Guo and Yan, Chengwei and Dong, Fuyu and Hu, Jiawei and Wang, Di and Luo, Nan and Liu, Gang and Wang, Quan},
-  booktitle={Proceedings of the 34th ACM International Conference on Multimedia},
-  year={2026}
-}</code></pre>
-    </div>
-  </section> -->
 
   <footer class="footer">
     <div class="container">
